@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Noto+Sans+JP:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@300;700&display=swap");
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 3rem 0 0 0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.938rem;
+  color: #101010;
+  line-height: 1.6;
+}
+
+h1, h2, p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #101010;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.section {
+  padding: 3rem 0;
+}
+.section-title {
+  font-size: 1.25rem;
+  color: #101010;
+  margin: 2rem 0 0.5rem;
+  text-align: center;
+  padding-bottom: 2rem;
+  margin-top: 0;
+}
+.section-all {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #606060;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.button {
+  display: inline-block;
+  background-color: #F1558E;
+  color: #fafafa;
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: #A22657;
+}
+
+.big-grid {
+  max-width: 1024px;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-column-gap: 2rem;
+  width: calc(100% - 3rem);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: #101010;
+}
+.header .nav {
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.header .nav__logo {
+  font-weight: 700;
+  transition: 0.4s;
+  color: #fff;
+}
+.header .nav__logo i {
+  color: #F1558E;
+  transition: 0.4s;
+  display: none;
+}
+.header .nav__logo:hover {
+  color: #A22657;
+}
+.header .nav__logo:hover i {
+  display: inline-block;
+}
+.header .nav__list-item {
+  margin-bottom: 2rem;
+}
+.header .nav__list-item .link {
+  color: #101010;
+  font-weight: 600;
+}
+.header .nav__list-item .link:hover {
+  color: #F1558E;
+}
+.header .nav__list-item .link.active {
+  color: #F1558E;
+}
+.header .nav .icons {
+  display: flex;
+}
+.header .nav .icons .icon {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.header .nav .icons .icon:hover {
+  color: #A22657;
+  transform: scale(1.2);
+}
+
+@media screen and (max-width: 768px) {
+  .header .nav__menu {
+    position: fixed;
+    top: 3rem;
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 2rem;
+    background-color: #fafafa;
+    transition: 0.5s;
+  }
+  .header .nav__menu.show {
+    right: 0;
+  }
+}
+.main .home {
+  background-color: #f0f1f3;
+  background-color: #f5f4f2;
+  background-image: linear-gradient(315deg, #ff4081 0%, #f5f4f2 110%);
+}
+.main .home__container {
+  height: calc(100vh - 3rem);
+}
+.main .home__data {
+  padding-top: 14rem;
+}
+.main .home__title {
+  align-self: center;
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+  transition: 0.5s;
+}
+.main .home__title span {
+  font-size: 2rem;
+}
+.main .home__title:hover {
+  transform: translateY(-0.5rem);
+}
+.main .home__img {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.2rem;
+  width: 280px;
+  height: 500px;
+}
+.main .collection .section-title {
+  font-size: 2.3rem;
+  padding-bottom: 0;
+  border-bottom: 1px solid #606060;
+}
+.main .collection__container {
+  row-gap: 1rem;
+}
+.main .collection__box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1.5rem;
+  background-color: #f907fc;
+  background-image: linear-gradient(315deg, #f907fc 40%, #05d6d9 74%);
+  transition: 0.4s;
+}
+.main .collection__box:hover {
+  transform: translateY(-0.5rem);
+}
+.main .collection__box img {
+  width: auto;
+  height: 300px;
+  transition: 0.5s ease;
+}
+.main .collection__box img:hover {
+  transform: scale(1.1);
+}
+.main .collection__data a {
+  background-color: #ebe2e5;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+.main .collection__data a:hover {
+  background-color: #cb7e97;
+  color: #101010;
+}
+.main .collection__title {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.main .collection__subtitle {
+  font-size: 1.25rem;
+  color: #606060;
+}
+.main .collection__view {
+  font-size: 0.75rem;
+  color: #606060;
+}
